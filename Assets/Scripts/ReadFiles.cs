@@ -73,6 +73,7 @@ public class ReadFiles : MonoBehaviour
         //for (int i = 0; i < N; i++)
         {
             g = Instantiate(buttonTemp, transform);
+            g.transform.SetAsFirstSibling();
             g.transform.GetChild(0).GetComponent<Image>().sprite = data.countries[i].icon;
             g.transform.GetChild(1).GetComponent<TMP_Text>().text = ("Name: " + data.countries[i].name.common);
             g.transform.GetChild(2).GetComponent<TMP_Text>().text = ("Idd: " + data.countries[i].idd.root.ToString());
